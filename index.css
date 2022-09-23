@@ -1,0 +1,68 @@
+/* css reset ritual */
+
+*,
+*::before,
+*::after {
+      padding: 0; margin: 0;
+      box-sizing: border-box;
+}
+
+html {
+      font-family: "Poppins", sans-serif;
+      font-size: 16px;
+      color: hsl(200, 20%, 25%);
+}
+
+body {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: #fcfefd;
+}
+
+a {
+      text-decoration: none;
+      color: inherit;
+}
+
+.topbar {
+      width: 100%;
+      padding: 30px 40px;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(119, 140, 202, 0.15);
+}
+
+.topbar__title {
+      font-size: 1.2rem;
+      margin-right: auto;
+}
+
+.topbar__title > span {
+      color: red;
+}
+
+.nav {
+      display: flex;
+}
+
+.nav__item {
+      font-size: 0.9rem;
+      margin-left: 40px;
+}
+
+.content {
+      width: 100%;
+      flex-grow: 1;
+      overflow: auto;
+}
+
+.footer {
+      font-size: 0.8rem;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+      opacity: 0.5;
+}
