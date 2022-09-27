@@ -5,42 +5,70 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>ZETTACAMP: CATFISH</title>
+      <title>HOME</title>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-      <header>
-            <h1>Choirul Anam</h1>
-            <img width="230px" src="./assets/images/me.png" alt="me">
-      </header>
-
-      <main>
-            <h2>About me</h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;<b>Choirul</b> was drown to learn and become <i>Front End Developer</i>. He really wants to experience a real project, working with a great team, discuss things related to programming, and wanting to be part of ZettaByte. During his free time, he loves to listening to music.</p>
-      </main>
-
-      <nav>
-            <a href="https://github.com/zettacamp-choirul-annam">
-                  <img src="./assets/images/github-logo.png" alt="">
-                  <span>zettacamp-choirul-annam</span>
-            </a>
-
-            <a href="https://instagram.com">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="">
-                  <span>instagram</span>
-            </a>
-
-            <a href="mailto:choirul.annam@zettacamp.pro">
-                  <img src="./assets/images/mail.png" alt="">
-                  <span>choirul.annam@zettacamp.pro</span>
-            </a>
+      <nav class="nav">
+            <a href="./index.html" class="nav__item">Home</a>
+            <a href="./shop.html" class="nav__item">Shop</a>
       </nav>
 
-      <footer>
+      <header class="header">
+            <img width="500" class="header__image" src="./assets/images/me.png" alt="me">
+            <h1 class="header__title">Choirul Anam</h1>
+            <p class="header__desc">Choirul was drown to learn and become <strong><i>Front End Developer</i></strong>. He really wants to experience a real project, working with a great team, discuss things related to programming, and wanting to be part of <b>ZettaByte</b>.</p>
+      </header>
+
+      <main class="content">
+            <div class="table__wrapper">
+                  <table class="table">
+                        <thead></thead>
+                        <tbody>
+                              <tr>
+                                    <td><b>Nick Name</b></td>
+                                    <td><b>:</b></td>
+                                    <td>Annam</td>
+                              </tr>
+                              <tr>
+                                    <td><b>Full Name</b></td>
+                                    <td><b>:</b></td>
+                                    <td>Choirul Annam</td>
+                              </tr>
+                              <tr>
+                                    <td><b>Email Address</b></td>
+                                    <td><b>:</b></td>
+                                    <td><a href="mailto:choirul.annam@zettacamp.pro">choirul.annam@zettacamp.pro</a></td>
+                              </tr>
+                              <tr>
+                                    <td><b>Zettachat ID</b></td>
+                                    <td><b>:</b></td>
+                                    <td><a href="">Choirul.Annam</a></td>
+                              </tr>
+                              <tr>
+                                    <td><b>Hobby</b></td>
+                                    <td><b>:</b></td>
+                                    <td>
+                                          <ol>
+                                                <li>Listen to music</li>
+                                                <li>Cooking</li>
+                                          </ol>
+                                    </td>
+                              </tr>
+                        </tbody>
+                  </table>
+            </div>
+            <div class="content__image">
+                  <img src="https://images.unsplash.com/photo-1660461712603-ffa53b3a3303?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
+            </div>
+      </main>
+
+      <footer class="footer">
             &copy; 2022 by me. All human rights is reserved
       </footer>
-</body>
+
+</body> 
 
 </html>
