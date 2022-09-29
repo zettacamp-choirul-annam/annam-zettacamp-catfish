@@ -225,6 +225,39 @@ ul, ol {
       left: 40px;
       width: calc(100% - 80px);
 }
+
+/* profile */
+
+.profile {
+      width: 100%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.profile__pict {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+}
+
+.profile__name {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+}
+
+.profile__birth,
+.profile__email,
+.profile__password,
+.profile__phone,
+.profile__gender {
+      margin-bottom: 10px;
+}
  
 /* header */
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>REGISTER</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+      <header class="header">
+            <h1 class="header__title">69.</h1>
+            <nav class="nav">
+                  <a href="./index.html" class="nav__item">Home</a>
+                  <a href="./music.html" class="nav__item">Music</a>
+                  <a href="./shop.html" class="nav__item">Shop</a>
+                  <a href="./register.html" class="nav__item nav__item--active">Register</a>
+                  <a href="./profiles.html" class="nav__item">Profiles</a>
+                  <a href="./contact.html" class="nav__item">Contact</a>
+            </nav>
+      </header>
+
+      <main class="main">
+            <h1 align="center">Ayo Mendaftar!</h1>
+
+            <br>
+            <br>
+            
+            <div class="card__row">
+                  <div class="card">
+                        <form class="form">
+                              <div class="form__title">Name</div>
+
+                              <div class="form__wrapper">
+                                    <input class="form__input" name="first_name" type="text" placeholder="*first name">
+                                    <input class="form__input" name="last_name" type="text" placeholder="last name">
+                              </div>
+                              
+                              
+                              <div class="form__title">Birth</div>
+                              <input class="form__input" name="birth" type="date">
+
+                              <div class="form__title">Your Credentials</div>
+                              <input class="form__input" name="email" type="email" placeholder="*email address">
+                              <input class="form__input" name="telp" type="tel" placeholder="*phone number">
+                              <input class="form__input" name="password" type="password" placeholder="*password">
+
+                              <div class="form__title">About you</div>
+                              <textarea class="form__input" name="about" placeholder="write your message here..."></textarea>
+                              
+                              <div>
+                                    <input class="form__radio" value="male" type="radio" name="gender" id="r-1">
+                                    <label class="form__label" for="r-1">male</label>
+                                    <input class="form__radio" value="female" type="radio" name="gender" id="r-2">
+                                    <label class="form__label" for="r-2">female</label>
+                                    <input class="form__radio" value="non binary" type="radio" name="gender" id="r-3">
+                                    <label class="form__label" for="r-3">non binary</label>
+                              </div>
+
+                              <br>
+
+                              <div class="form__title">Personal Picture</div>
+                              <input class="form__input" name="picture" type="file" accept=".jpg, .png">
+
+                              <button class="form__submit" type="submit">daftar</button>
+                        </form>
+                  </div>
+                  <div class="card">
+                        <div class="profile">
+                              <img width="400" src="./assets/images/undraw_my_documents_re_13dc.svg" alt="">
+                        </div>
+                  </div>
+            </div>
+      </main>
+
+      <footer class="footer">&copy; 2022 by me. All human rights is reserved</footer>     
+      <script src="./assets/js/form.js"></script>
+</body>
+
+</html>
