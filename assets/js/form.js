@@ -51,7 +51,7 @@ function showProfiles() {
       const template = data => {
             return `
                   <tr>
-                        <td class="table__item"><img src="${data.picture}" alt=""></td>
+                        <td class="table__item round"><img src="${data.picture}" alt=""></td>
                         <td>${data.firstName}</td>
                         <td>${data.lastName}</td>
                         <td>${data.birth}</td>
