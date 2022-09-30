@@ -1,0 +1,20 @@
+.song__container {
+
+}
+
+.song {
+      border-collapse: collapse;
+}
+
+.song tr td,
+.song tr th {
+      padding: 20px;
+      border: 1px solid rgb(255, 255, 255);
+}
+
+.song tr td img {
+      width: 100px;
+      height: 100px;
+      border-radius: 10px;
+      object-fit: cover;
+}

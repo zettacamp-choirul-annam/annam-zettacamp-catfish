@@ -1,0 +1,115 @@
+@import url("./variables.css");
+@import url("./reset.css");
+@import url("./price.css");
+@import url("./form.css");
+@import url("./profile.css");
+@import url("./song.css");
+@import url("./album.css");
+
+/* biar estetik hehe */
+.overlay {
+      position: absolute;
+      height: 100%;
+      top: 0; left: 0;
+      z-index: -100;
+      filter: blur(100px);
+      opacity: 0.4;
+}
+
+/* header */
+
+.header {
+      position: fixed;
+      top: 0; left: 0;
+      z-index: 100;
+      width: 100%;
+      padding: 30px 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      backdrop-filter: blur(10px);
+}
+
+/* logo */
+
+.logo {
+      display: flex;
+      align-items: center;
+}
+
+.logo__icon {
+      width: 1.2rem;
+      height: auto;
+      margin-right: 0.6em;
+}
+
+.logo__text {
+      font-size: 1.3rem;
+      font-weight: 500;
+}
+
+/* nav */
+
+.nav__item {
+      font-size: 0.9rem;
+      font-weight: 300;
+      margin-left: 30px;
+      opacity: 0.5;
+      transition: 0.2s;
+}
+
+.nav__item:hover,
+.nav__item--active { 
+      opacity: 1;
+}
+
+/* content */
+
+.content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 180px 80px 60px 80px;
+}
+
+/* intro */
+
+.intro {
+      width: 100%;
+      margin-bottom: 160px;
+}
+
+.intro__heading,
+.intro__copy {
+      text-align: center;
+}
+
+.intro__heading {
+      font-size: 4rem;
+      font-weight: 700;
+      margin-bottom: 0.6em;
+}
+
+.intro__heading.gradient {
+      background: -webkit-linear-gradient(45deg, var(--color-blue), var(--color-teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+}
+
+.intro__copy {
+      font-size: 1.5rem;
+      font-weight: 300;
+      opacity: 0.6;
+}
+
+/* footer */
+
+.footer {
+      text-align: center;
+      font-weight: 300;
+      font-size: 0.8rem;
+      width: 100%;
+      padding: 40px;
+      opacity: 0.5;
+}

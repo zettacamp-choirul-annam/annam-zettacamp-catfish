@@ -1,0 +1,23 @@
+.album {}
+
+.album__head {
+      width: 100%;
+      display: flex;
+}
+
+.album__cover {
+      margin-right: 20px;
+}
+
+.album__desc {
+      font-weight: 300;
+      line-height: 1.75;
+}
+
+.album__details tr td {
+      padding-right: 1rem;
+}
+
+.album__songs {
+      margin-left: 1rem;
+}

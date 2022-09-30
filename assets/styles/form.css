@@ -1,0 +1,35 @@
+.form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+}
+
+.form__input,
+.form__submit,
+.form__label {
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form__wrapper {
+      margin: 0 0 20px 0;
+      display: flex;
+}
+
+.form__label {
+      margin-bottom: 0;
+      margin-right: 20px;
+      width: fit-content;
+}
+
+input[name="radio"]:checked + .form__label {
+      background-color: rgba(255, 255, 255, 0.1);
+}
+
+.form__submit {
+      margin-bottom: 0;
+      color: #fff;
+      background-color: var(--color-blue);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <title>Home</title>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="../assets/styles/index.css">
+</head>
+
+<body>
+      <!-- <img src="../assets/images/milad-fakurian-E8Ufcyxz514-unsplash.jpg" alt="" class="overlay"> -->
+      
+      <header class="header">
+            <div class="logo">
+                  <svg class="logo__icon" xmlns="http://www.w3.org/2000/svg" width="90" height="158" fill="none" viewBox="0 0 90 158">
+                        <path fill="currentColor" fill-rule="evenodd" d="m44.504 0 16.737 16.768 27.958 27.82v33.537L44.504 33.537 0 78.125V44.59L44.504 0Zm11.982 104.421v41.349l-11.982 11.814-11.791-11.814v-41.349l11.791-11.814 11.982 11.814ZM44.504 46.303l16.737 16.769 27.958 27.82v22.104l-5.896 5.716-17.878 17.912v-35.823l-20.92-20.96-20.922 20.96v35.823L0 112.996V90.892l44.504-44.588Z" clip-rule="evenodd"/>
+                  </svg>                      
+                  <h1 class="logo__text">mcanam</h1>
+            </div>
+      </header>
+
+      <main class="content">
+            <div class="intro" style="margin-bottom: 30px;">
+                  <h2 class="intro__heading">
+                        Join the best <br> 
+                        frontend teams
+                  </h2>
+                  <p class="intro__copy"></p>
+            </div>
+            <form class="form" style="width: 500px">
+                  <input type="email" class="form__input" placeholder="*email" required>
+                  <input type="text" class="form__input" placeholder="*name" required>
+                  <input type="telp" class="form__input" placeholder="phone">
+                  <input type="password" class="form__input" placeholder="*password" required>
+                  <div class="form__wrapper">
+                        <input type="radio" name="radio" id="r-1" value="Hobby" hidden checked> 
+                        <label for="r-1" class="form__label">Hobby</label>    
+                        <input type="radio" name="radio" id="r-2" value="Pro" hidden> 
+                        <label for="r-2" class="form__label">Pro</label>
+                        <input type="radio" name="radio" id="r-3" value="Enterprise" hidden> 
+                        <label for="r-3" class="form__label">Enterprise</label>
+                  </div>
+                  <button type="submit" class="form__submit">register</button>
+            </form>
+      </main>
+
+      <footer class="footer">&copy; 2022 by me</footer>
+      <script>
+            const form = document.querySelector(".form");
+
+            form.addEventListener("submit", (e) => {
+                  e.preventDefault();
+                  window.location = "./profile.html";
+            });
+      </script>
+</body>
+
+</html>
