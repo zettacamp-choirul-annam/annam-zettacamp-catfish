@@ -1,0 +1,25 @@
+.container {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+}
+
+.col {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: center;
+}
+
+.col:nth-child(1) {
+      align-items: center;
+}
+
+.info span {
+      white-space: pre;
+}
+
+.bio span:first-child {
+      font-size: 1.4rem;
+}
