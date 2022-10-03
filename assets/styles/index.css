@@ -21,5 +21,9 @@
 }
 
 .bio span:first-child {
+      font-size: 2rem;
+}
+
+.bio span:last-child {
       font-size: 1.4rem;
 }
