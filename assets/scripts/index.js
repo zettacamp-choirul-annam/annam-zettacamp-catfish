@@ -13,7 +13,7 @@ function renderCard(data) {
 
       data.forEach(item => {
             html += `
-            <div class="card">
+            <div class="card p-2">
                 <div class="card__image">
                    <img src="${item.image}" alt="image">
                 </div>
