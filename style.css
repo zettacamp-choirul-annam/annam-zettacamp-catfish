@@ -89,7 +89,7 @@ footer a {
       font-size: 1.6rem;
 }
 
-.topbar button {
+.topbar > div >a {
       padding: 0.5em 0.6em; 
       background-color: rgb(12, 161, 124); 
       display: flex;
@@ -98,7 +98,7 @@ footer a {
       border-radius: 5px;
 }
 
-.topbar button > svg {
+.topbar > div> a > svg {
       margin-right: 5px;
 }
 
