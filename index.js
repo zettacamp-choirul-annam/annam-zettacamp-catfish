@@ -19,14 +19,10 @@ function purchaseBook({ item, discount, tax, stock, amount }) {
             totalPrice += priceAfterDiscount;
             remainStock -= 1;
 
-            console.log(`Transaksi berhasil. | Total : Rp ${totalPrice.toLocaleString("id")} | Sisa Stok : ${remainStock}`);
+            let message = `Transaksi berhasil. | Total : Rp ${totalPrice.toLocaleString("id")} | Sisa Stok : ${remainStock} | `;
+                message += remainStock > 0 ? "Anda bisa berbelanja lagi......." : "Anda TIDAK bisa berbelanja lagi.......";
 
-            if (remainStock > 0) {
-                  console.log("Anda bisa berbelanja lagi.......");
-            } else {
-                  console.log("Anda TIDAK bisa berbelanja lagi.......");
-            }
-
+            console.log(message);
             console.log(`-------------------------------------------------------------------------------------------`);
       }
 }
