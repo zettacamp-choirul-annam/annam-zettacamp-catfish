@@ -58,7 +58,7 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
 
 const item = {
       price: 120000,
-      name: "Dildo"
+      name: "Penggaris"
 };
 
 purchaseBook({
