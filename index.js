@@ -1,17 +1,27 @@
 function purchaseBook({ item, discount, tax, stock, amount, credit }) {
-      // using destructuring
+      // memecah value dari object
+      // kedalam variable baru
       const { name, price } = item;
 
-      // discount and tax amount in decimal
+      // mengkonversi nilai diskon dari
+      // persen ke desimal
       const discountAmount = discount / 100 * price;
 
-      // price after discount and tax
+      // menghitung harga setelah diskon
       const priceAfterDiscount = price - discountAmount;
 
-      const taxAmount     = tax / 100 * priceAfterDiscount;
+      // mengkonversi nilai tax dari
+      // persen ke desimal berdasarkan harga setelah diskon
+      const taxAmount = tax / 100 * priceAfterDiscount;
+
+      // menghitung harga + pajak
       const priceAfterTax = priceAfterDiscount + taxAmount;
 
+      // buat nyimpin jumlah stok
+      // yang tersisa
       let remainStock = stock;
+
+      // buat nyimpen total harga
       let totalPrice  = 0;
 
       for (let i = 1; i <= amount; i++) {
@@ -20,7 +30,9 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
                   break; // brrrrrrrrrrrrrrrreeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaak
             }
 
+            // menambah jumlah total harga
             totalPrice += priceAfterTax;
+            // mengurangi stok
             remainStock -= 1;
 
             let message = `Transaksi berhasil. | Total : Rp ${totalPrice.toLocaleString("id")} | Sisa Stok : ${remainStock} | `;
@@ -32,13 +44,15 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
 
       console.log(`-------------------------------------------------------------------------------------------`);
       
-      // to hold term object
+      // buat nyimpen object term
       const terms = [];
 
-      // get cicilan by divide totalPrice with credit
+      // menghitung cicilan dengan membagi 
+      // total harga dengan berapa lama masa kreditnya
       const cicilan = totalPrice / credit;
 
       for (let i = 1; i <= credit; i++) {
+            // push object kedalam array terms
             terms.push({
                   term: i,
                   total: `Rp ${(cicilan * i).toLocaleString("id")}`
