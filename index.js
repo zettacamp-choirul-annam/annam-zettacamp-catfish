@@ -1,22 +1,26 @@
-function purchaseBook({ item, discount, tax, stock, amount }) {
+function purchaseBook({ item, discount, tax, stock, amount, credit }) {
+      // using destructuring
+      const { name, price } = item;
+
       // discount and tax amount in decimal
-      const discountAmount = discount / 100 * item.price;
-      const taxAmount      = tax / 100 * item.price;
+      const discountAmount = discount / 100 * price;
 
       // price after discount and tax
-      const priceAfterTax      = item.price + taxAmount;
-      const priceAfterDiscount = priceAfterTax - discountAmount;
+      const priceAfterDiscount = price - discountAmount;
+
+      const taxAmount     = tax / 100 * priceAfterDiscount;
+      const priceAfterTax = priceAfterDiscount + taxAmount;
 
       let remainStock = stock;
       let totalPrice  = 0;
 
-      for (let i = 1; i < amount; i++) {
+      for (let i = 1; i <= amount; i++) {
             if (remainStock == 0) {
                   console.log("Maaf stock sudah habis. silahkan datang lagi besok!");
                   break; // brrrrrrrrrrrrrrrreeeeeeeeeeeeeeeaaaaaaaaaaaaaaaaak
             }
 
-            totalPrice += priceAfterDiscount;
+            totalPrice += priceAfterTax;
             remainStock -= 1;
 
             let message = `Transaksi berhasil. | Total : Rp ${totalPrice.toLocaleString("id")} | Sisa Stok : ${remainStock} | `;
@@ -25,17 +29,43 @@ function purchaseBook({ item, discount, tax, stock, amount }) {
             console.log(message);
             console.log(`-------------------------------------------------------------------------------------------`);
       }
+
+      console.log(`-------------------------------------------------------------------------------------------`);
+      
+      // to hold term object
+      const terms = [];
+
+      // get cicilan by divide totalPrice with credit
+      const cicilan = totalPrice / credit;
+
+      for (let i = 1; i <= credit; i++) {
+            terms.push({
+                  term: i,
+                  total: `Rp ${(cicilan * i).toLocaleString("id")}`
+            });
+      }
+
+      const terms2 = [
+            "===================================",
+            ...terms, // using spread operator
+            "===================================",
+      ];
+
+      console.log(terms2);
 }
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 const item = {
-      price: 200000,
-      name: "madilog"
+      price: 120000,
+      name: "Dildo"
 };
 
 purchaseBook({
       item: item,
-      discount: 30,
+      discount: 50,
       tax: 10,
       stock: 5,
-      amount: 20
+      amount: 6,
+      credit: 6
 });
