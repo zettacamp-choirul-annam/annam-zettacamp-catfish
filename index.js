@@ -166,7 +166,7 @@ function generateRandomPlaylist(data) {
 
             // test nambah total durasi. kalo setelah ditambah ternyata
             // durasinya lebih dari 60 menit, udah stop. kalo ngga ya lanjut
-            if (output.duration + song.duration > 60) break;
+            if ((output.duration + song.duration) > 60) break;
 
             // push song ke output.playlist
             output.playlist.push(song);
