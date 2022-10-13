@@ -126,21 +126,21 @@ const songs = [
 function getSongsByGenre(data, genre) {
       const songs = data;
 
-      const sorted = songs.filter(song => {
+      const output = songs.filter(song => {
             return song.genre == genre;
       });
 
-      return sorted;
+      return output;
 }
 
 function getSongsByArtist(data, artist) {
       const songs = data;
 
-      const sorted = songs.filter(song => {
+      const output = songs.filter(song => {
             return song.artist == artist;
       });
 
-      return sorted;
+      return output;
 }
 
 function generateRandomPlaylist(data) {
