@@ -2,7 +2,7 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
       // memecah value dari object
       // kedalam variable baru
       const { name, price } = item;
-
+ 
       // mengkonversi nilai diskon dari
       // persen ke desimal
       const discountAmount = discount / 100 * price;
@@ -49,13 +49,24 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
 
       // menghitung cicilan dengan membagi 
       // total harga dengan berapa lama masa kreditnya
-      const cicilan = totalPrice / credit;
+      let cicilan = parseFloat((totalPrice / credit).toFixed(2));
+      // let cicilan = 857.14;
 
       for (let i = 1; i <= credit; i++) {
+            let totalCicilan = cicilan * i;
+
+            // kalo udah nyampe ujung
+            if (i == credit) {
+                  const diff = totalPrice - totalCicilan;
+                  cicilan += diff;
+                  totalCicilan += diff;
+            }
+
             // push object kedalam array terms
             terms.push({
                   term: i,
-                  total: `Rp ${(cicilan * i).toLocaleString("id")}`
+                  cicilan: cicilan.toFixed(2),
+                  total: `$${(totalCicilan).toFixed(2)}`
             });
       }
 
@@ -71,15 +82,15 @@ function purchaseBook({ item, discount, tax, stock, amount, credit }) {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const item = {
-      price: 120000,
+      price: 6000,
       name: "Penggaris"
 };
 
 purchaseBook({
       item: item,
-      discount: 50,
-      tax: 10,
+      discount: 0,
+      tax: 0,
       stock: 5,
-      amount: 6,
-      credit: 6
+      amount: 1,
+      credit: 7
 });
