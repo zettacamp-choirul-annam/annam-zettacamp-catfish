@@ -175,6 +175,7 @@ function generateRandomPlaylist(data) {
             output.duration += song.duration;
       }
 
+      output.duration = parseFloat(output.duration.toFixed(2));
       return output;
 }
 
@@ -185,10 +186,10 @@ function getRandomNumber(min, max) {
 
 ////////////////////////////////////////////////////
 
-// const songsByGenre = getSongsByGenre(songs, "Rock");
-// const songsByArtist = getSongsByArtist(songs, "Twice");
-// const randomPlaylist = generateRandomPlaylist(songs);
+const songsByGenre = getSongsByGenre(songs, "Rock");
+const songsByArtist = getSongsByArtist(songs, "Twice");
+const randomPlaylist = generateRandomPlaylist(songs);
 
-// console.log("songs by genre:", songsByGenre);
-// console.log("songs by artist:", songsByArtist);
-// console.log("random playlist:", randomPlaylist);
+console.log("songs by genre:", songsByGenre);
+console.log("songs by artist:", songsByArtist);
+console.log("random playlist:", randomPlaylist);
