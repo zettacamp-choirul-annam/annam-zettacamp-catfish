@@ -124,20 +124,20 @@ const songs = [
 ////////////////////////////////////////////////////
 
 function getSongsByGenre(data, genre) {
-      const songs = data;
+      const songs = [...data];
 
       const output = songs.filter(song => {
-            return song.genre == genre;
+            return song.genre.includes(genre);
       });
 
       return output;
 }
 
 function getSongsByArtist(data, artist) {
-      const songs = data;
+      const songs = [...data];
 
       const output = songs.filter(song => {
-            return song.artist == artist;
+            return song.artist.includes(artist);
       });
 
       return output;
@@ -146,7 +146,7 @@ function getSongsByArtist(data, artist) {
 function generateRandomPlaylist(data) {
       // bikin reference baru
       // biar nggak ada side effect
-      const songs = data;
+      const songs = [...data];
 
       // buat nampung output
       const output = {
@@ -185,10 +185,10 @@ function getRandomNumber(min, max) {
 
 ////////////////////////////////////////////////////
 
-const songsByGenre = getSongsByGenre(songs, "Rock");
-const songsByArtist = getSongsByArtist(songs, "Twice");
-const randomPlaylist = generateRandomPlaylist(songs);
+// const songsByGenre = getSongsByGenre(songs, "Rock");
+// const songsByArtist = getSongsByArtist(songs, "Twice");
+// const randomPlaylist = generateRandomPlaylist(songs);
 
-console.log("songs by genre:", songsByGenre);
-console.log("songs by artist:", songsByArtist);
-console.log("random playlist:", randomPlaylist);
+// console.log("songs by genre:", songsByGenre);
+// console.log("songs by artist:", songsByArtist);
+// console.log("random playlist:", randomPlaylist);
