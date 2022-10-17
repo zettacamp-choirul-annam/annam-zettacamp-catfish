@@ -1,3 +1,5 @@
+var test = "asas";
+test = 6;
 function sliceString(word, start, end) {
     return word.slice(start, end);
 }

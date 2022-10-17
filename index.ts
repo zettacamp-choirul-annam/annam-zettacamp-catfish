@@ -1,4 +1,9 @@
-function sliceString(word: string, start: number, end: number): string {
+// let test:any = "asas"
+
+// test = 6
+
+
+function sliceString(word, start: number, end: number): string {
       return word.slice(start, end);
 }
 
