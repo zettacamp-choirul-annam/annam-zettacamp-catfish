@@ -1,0 +1,51 @@
+:host {
+  width: calc(25% - 40px);
+  margin: 20px;
+  user-select: none;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  background: grey;
+  overflow: hidden;
+}
+
+.card.active {
+  color: red;
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.card-title {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.card-desc {
+  margin-bottom: 20px;
+}
+
+.card-button {
+  font-weight: 600;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: black;
+}

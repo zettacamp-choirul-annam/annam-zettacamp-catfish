@@ -1,0 +1,9 @@
+<div class="card" [ngClass]="active ? 'active' : ''">
+    <img [src]="item.img" class="card-image">
+    <div class="card-content">
+      <h2 class="card-title">{{ item.title }}</h2>
+      <p class="card-desc">{{ item.desc }}</p>
+      <button class="card-button" (click)="onClick()">BUY {{ active ? '&check;' : '' }}</button>
+    </div>
+</div>
+
