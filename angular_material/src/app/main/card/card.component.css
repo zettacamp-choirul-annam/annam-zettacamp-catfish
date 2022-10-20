@@ -1,0 +1,43 @@
+:host {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  color: hsl(200, 20%, 95%);
+  background-color: hsl(200, 20%, 10%);
+  box-shadow: 0 10px 20px rgba(119, 140, 202, 0.15);
+  border-radius: 20px;
+}
+
+.card-avatar {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.card-content {
+  margin-right: auto;
+}
+
+.card-fullname {
+  margin-bottom: 5px;
+}
+
+.card-nickname {
+  color: hsl(200, 20%, 60%);
+}
+
+.card-action {
+  display: flex;
+}
+
+.card-button {
+  line-height: 0;
+  margin-left: 30px;
+  transition: 0.2s;
+}
+
+.card-button.delete:hover {
+  color: #fe4c63;
+}

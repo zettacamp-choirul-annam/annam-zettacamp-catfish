@@ -1,0 +1,8 @@
+:host {
+  width: 100%;
+/*   max-height: 400px; */
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+/*   overflow: auto; */
+}

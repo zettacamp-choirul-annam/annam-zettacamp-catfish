@@ -1,0 +1,6 @@
+<app-form (submited)="onSubmited($event)" [item]="item"></app-form>
+<app-form-preview
+  [data]="list"
+  (deleted)="onDelete($event)"
+  (edited)="onEdit($event)"
+></app-form-preview>

@@ -1,0 +1,6 @@
+<app-card
+  *ngFor="let item of data; let i = index"
+  [item]="item" [index]="i"
+  (edited)="onEdit($event)"
+  (deleted)="onDelete($event)"
+></app-card>
