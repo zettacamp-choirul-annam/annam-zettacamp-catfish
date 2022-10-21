@@ -7,16 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   list: any = [];
-  item: any = {};
+  data: any = {};
 
-  onSubmited(data: any) {
+  onFormSubmit(data: any) {   
+    if (data.index != null) {
+      return this.list[data.index] = data;
+    }
+
     this.list.push(data);
   }
 
   onEdit(index: any) {
-    this.item = {
-      isEdit: true,
-      ...this.list[index]
+    const item = this.list[index];
+          item.index = index;
+          
+    this.data = {
+      edit: true,
+      ...item
     };
   }
 

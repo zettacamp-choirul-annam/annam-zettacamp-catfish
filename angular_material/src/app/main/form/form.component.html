@@ -1,9 +1,11 @@
 <form class="form" #form="ngForm" (ngSubmit)="onSubmit(form)">
-  <h1 class="form-title">{{ isEditMode ? 'Update' : 'Register' }} User</h1>
+  <h1 class="form-title">{{ isEdit ? 'Update' : 'Register' }} User</h1>
 
   <label class="form-label">Full Name</label>
-  <input class="form-input" name="full_name" ngModel [value]="item.full_name">
+  <input class="form-input" name="full_name" #full_name ngModel>
+
   <label class="form-label">Nick Name</label>
-  <input class="form-input" name="nick_name" ngModel [value]="item.nick_name">
-  <button class="form-submit" type="submit">{{ isEditMode ? 'Update' : 'Register' }}</button>
+  <input class="form-input" name="nick_name" #nick_name ngModel>
+
+  <button class="form-submit" type="submit" [ngClass]="isEdit ? 'edit' : ''" #submit_btn>{{ isEdit ? 'Update' : 'Register' }}</button>
 </form>

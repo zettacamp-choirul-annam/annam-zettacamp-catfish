@@ -6,21 +6,36 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./form-preview.component.css']
 })
 export class FormPreviewComponent implements OnInit {
-  @Input() data: any;
-  @Output() deleted = new EventEmitter();
-  @Output() edited = new EventEmitter();
+  // I/O
+  @Input() list: any;
+  @Output() _delete = new EventEmitter();
+  @Output() _edit = new EventEmitter();
 
   constructor() { }
 
+  // lifecycle hooks
+
   ngOnInit(): void {
+    console.log('INIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIT!!!');
   }
 
+  // component methods
+
   onDelete(index: any) {
-    this.deleted.emit(index);
+    this._delete.emit(index);
   }
 
   onEdit(index: any) {
-    this.edited.emit(index);
+    this._edit.emit(index);
   }
-
 }
+
+/**
+ * 
+ * onInit
+ * onChanges
+ * doCheck
+ * afterViewInit
+ * onDestroy
+ * 
+ */

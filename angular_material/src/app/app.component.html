@@ -1,6 +1,6 @@
-<app-form (submited)="onSubmited($event)" [item]="item"></app-form>
+<app-form (_submit)="onFormSubmit($event)" [data]="data"></app-form>
 <app-form-preview
-  [data]="list"
-  (deleted)="onDelete($event)"
-  (edited)="onEdit($event)"
+  [list]="list"
+  (_delete)="onDelete($event)"
+  (_edit)="onEdit($event)"
 ></app-form-preview>

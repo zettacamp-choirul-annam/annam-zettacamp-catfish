@@ -42,4 +42,9 @@
   color: hsl(200, 20%, 90%);
   background-color: hsl(200, 20%, 10%);
   margin-top: 20px;
+  transition: 0.2s;
+}
+
+.form-submit.edit {
+  background-color: rgb(0, 106, 255);
 }

@@ -8,6 +8,7 @@
   background-color: hsl(200, 20%, 10%);
   box-shadow: 0 10px 20px rgba(119, 140, 202, 0.15);
   border-radius: 20px;
+  transition: 0.2s;
 }
 
 .card-avatar {
