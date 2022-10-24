@@ -1,0 +1,8 @@
+<div class="list">
+      <app-card
+            *ngFor="let item of articles"
+            [item]="item"
+            (_likeClick)="onLikeClick($event)"
+            (_saveClick)="onSaveClick($event)"
+      ></app-card>
+</div>
