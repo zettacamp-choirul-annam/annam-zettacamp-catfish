@@ -1,22 +1,39 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { ArticleType } from 'src/app/articles.type';
-import { articleMock } from 'src/app/articles.mock';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
-  private articles: ArticleType[] = articleMock;
+  articles: BehaviorSubject<ArticleType[]> = new BehaviorSubject<ArticleType[]>([]);
 
-  constructor() { }
-
-  getArticle(): ArticleType[] {
-    return this.articles; 
+  constructor(private http: HttpClient) {
+    this.fetchArticle().subscribe(data => {
+      const articles: ArticleType[] = data;
+      this.articles.next(articles);
+    })
   }
 
-  updateArticle(id: number, data: ArticleType): ArticleType {
-    this.articles[id] = data;
-    return this.articles[id];
+  getArticles() {
+    return this.articles.getValue();
+  }
+
+  updateLike(id: number, liked: boolean) {
+    const articles = this.articles.getValue();
+    articles[id].liked = liked;
+    this.articles.next(articles);
+  }
+
+  updateSave(id: number, saved: boolean) {
+    const articles = this.articles.getValue();
+    articles[id].saved = saved;
+    this.articles.next(articles);
+  }
+
+  fetchArticle(): Observable<any> {
+    return this.http.get('../../../assets/articles.json');
   }
 }

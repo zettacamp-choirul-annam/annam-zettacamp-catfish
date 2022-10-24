@@ -8,8 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class CardComponent implements OnInit {
   @Input() item: any;
 
-  @Output() _likeClick: EventEmitter<number> = new EventEmitter();
-  @Output() _saveClick: EventEmitter<number> = new EventEmitter();
+  @Output() _likeClick: EventEmitter<any> = new EventEmitter();
+  @Output() _saveClick: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
@@ -17,11 +17,22 @@ export class CardComponent implements OnInit {
     this.item.author.picture = `url(${this.item.author.picture})`;    
   }
 
+  ngOnchanges() {
+    console.log(this.item);
+    
+  }
+
   onLikeClick() {
-    this._likeClick.emit(this.item.id);
+    this._likeClick.emit({
+      id: this.item.id, 
+      liked: !this.item.liked
+    });
   }
 
   onSaveClick() {
-    this._saveClick.emit(this.item.id);
+    this._saveClick.emit({
+      id: this.item.id, 
+      saved: !this.item.saved
+    });
   }
 }
