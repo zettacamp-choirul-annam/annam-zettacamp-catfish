@@ -1,0 +1,40 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "Ulysses",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/JoyceUlysses2.jpg/220px-JoyceUlysses2.jpg",
+      "author": "James Joyce",
+      "publisher": "Shakespeare and Company",
+      "publish_date": "2 February 1922",
+      "synopsis": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quaerat molestias animi, ut fuga aliquam minus eum aut quasi suscipit temporibus incidunt nesciunt eius delectus rem quisquam atque, doloremque voluptatibus!"
+    },
+    {
+      "id": 2,
+      "title": "Lolita",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Lolita_1955.JPG/220px-Lolita_1955.JPG",
+      "author": "Vladimir Nabokov",
+      "publisher": "Olympia Press",
+      "publish_date": "1955",
+      "synopsis": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quaerat molestias animi, ut fuga aliquam minus eum aut quasi suscipit temporibus incidunt nesciunt eius delectus rem quisquam atque, doloremque voluptatibus!"
+    },
+    {
+      "id": 3,
+      "title": "To the Lighthouse",
+      "cover": "https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/ToTheLighthouse.jpg/220px-ToTheLighthouse.jpg",
+      "author": "Virginia Woolf",
+      "publisher": "Hogarth Press",
+      "publish_date": "5 May 1927",
+      "synopsis": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quaerat molestias animi, ut fuga aliquam minus eum aut quasi suscipit temporibus incidunt nesciunt eius delectus rem quisquam atque, doloremque voluptatibus!"
+    },
+    {
+      "id": 4,
+      "title": "The Grapes of Wrath",
+      "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg/220px-The_Grapes_of_Wrath_%281939_1st_ed_cover%29.jpg",
+      "author": "John Steinbeck",
+      "publisher": "The Viking Press-James Lloyd",
+      "publish_date": "14 April 1939",
+      "synopsis": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quaerat molestias animi, ut fuga aliquam minus eum aut quasi suscipit temporibus incidunt nesciunt eius delectus rem quisquam atque, doloremque voluptatibus!"
+    }
+  ]
+}

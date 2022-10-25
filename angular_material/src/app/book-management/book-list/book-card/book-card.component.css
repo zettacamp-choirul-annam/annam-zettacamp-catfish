@@ -1,0 +1,16 @@
+mat-card {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+mat-card.selected {
+  color: #fff;
+  background-color: teal;
+}
+
+mat-card-title {
+  font-size: 1.2rem;
+  margin: 0;
+}

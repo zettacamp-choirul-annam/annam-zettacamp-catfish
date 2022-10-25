@@ -1,0 +1,8 @@
+<mat-card [ngClass]="{selected: isSelected}">
+  <mat-card-title>{{ book.title }}</mat-card-title>
+  <button mat-button (click)="onClick(book)">
+    <mat-icon fontIcon="check_circle" *ngIf="isSelected"></mat-icon>
+    {{ isSelected ? 'Selected' : 'Select' }}
+  </button>
+  <!-- <mat-card-actions align="end"></mat-card-actions> -->
+</mat-card>

@@ -1,0 +1,12 @@
+:host {
+  width: 50%;
+  height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+
+app-book-card {
+  margin-bottom: 20px;
+}
