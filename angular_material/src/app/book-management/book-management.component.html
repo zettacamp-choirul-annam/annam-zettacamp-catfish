@@ -9,8 +9,10 @@
   <mat-drawer-container class="container">
     <mat-drawer #drawer mode="side" opened="true">
       <mat-list role="list">
-        <mat-list-item role="listitem" routerLink="list" routerLinkActive="active">List</mat-list-item>
-        <mat-list-item role="listitem" routerLink="detail" routerLinkActive="active">Detail</mat-list-item>
+        <mat-list-item role="listitem" routerLink="list" [queryParams]="{ color: 'red' }" routerLinkActive="active">List
+        </mat-list-item>
+        <mat-list-item role="listitem" routerLink="detail" routerLinkActive="active">
+          Detail</mat-list-item>
       </mat-list>
     </mat-drawer>
     <mat-drawer-content>

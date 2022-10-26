@@ -15,11 +15,11 @@ const routes: Routes = [
     title: 'Detail',
     component: BookDetailComponent
   },
-  {
-    path: '',
-    redirectTo: 'list',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: 'list',
+  //   pathMatch: 'full'
+  // },
   {
     path: '**',
     redirectTo: 'list',

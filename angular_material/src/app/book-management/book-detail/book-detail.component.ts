@@ -11,8 +11,8 @@ import { BookType } from '../book.type';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
-  subscription1!: Subscription;
-  subscription2!: Subscription;
+  subscription!: Subscription;
+  // subscription2!: Subscription;
   selectedBook!: BookType | null;
 
   constructor(
@@ -21,19 +21,15 @@ export class BookDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.subscription1 = this.bookService.selectedBook.subscribe(data => {
-      this.selectedBook = data;
-    });
+    let id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
 
-    this.subscription2 = this.route.paramMap.subscribe(params => {
-      const id = parseInt(params.get('id')!, 10);
+    this.subscription = this.bookService.books.subscribe(data => {
       this.selectedBook = this.bookService.getBookById(id);
     });
   }
 
   ngOnDestroy() {
-    this.subscription1 && this.subscription1.unsubscribe();
-    this.subscription2 && this.subscription2.unsubscribe();
+    this.subscription && this.subscription.unsubscribe();
   }
 
   onReset() {
