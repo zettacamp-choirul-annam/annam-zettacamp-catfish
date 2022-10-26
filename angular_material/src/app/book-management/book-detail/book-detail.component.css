@@ -1,0 +1,93 @@
+:host {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.book-detail {
+  width: 100%;
+}
+
+.book-detail-cover {
+  width: 100%;
+  height: 500px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.book-detail-cover img {
+  width: 100%;
+}
+
+.book-detail-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.book-detail-author {
+  font-size: 1.5rem;
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.book-detail-synopsis {
+  line-height: 1.75;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+.book-detail-publisher {
+  opacity: 0.8;
+}
+
+.book-detail-empty {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.book-detail-empty-image {
+  width: 400px;
+  margin-bottom: 40px;
+}
+
+.book-detail-empty-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.book-detail-empty-text {
+  opacity: 0.6;
+}
+
+/* button {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: calc(100% - 80px);
+  padding: 10px;
+} */
+
+.back-button {
+  /* position: absolute;
+  top: 20px;
+  left: 20px; */
+  /* width: calc(100% - 80px); */
+  width: fit-content;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+}

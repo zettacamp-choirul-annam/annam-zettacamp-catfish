@@ -1,0 +1,25 @@
+<button class="back-button" mat-button routerLink="list">
+  <mat-icon>arrow_back_ios</mat-icon> Back to list
+</button>
+
+<div class="book-detail" *ngIf="selectedBook; else elseBlock">
+  <div class="book-detail-cover">
+    <img src="{{ selectedBook.cover }}" alt="">
+  </div>
+  <div class="book-detail-title">{{ selectedBook.title}}</div>
+  <div class="book-detail-author">by {{ selectedBook.author }}</div>
+  <div class="book-detail-synopsis">{{ selectedBook.synopsis }}</div>
+  <div class="book-detail-publisher">published by {{ selectedBook.publisher }} ( {{ selectedBook.publish_date }} )</div>
+</div>
+
+<ng-template #elseBlock>
+  <div class="book-detail-empty">
+    <img class="book-detail-empty-image" src="../../../assets/undraw_bookshelves_re_lxoy.svg" alt="">
+    <div class="book-detail-empty-title">No Selected Book</div>
+    <div class="book-detail-empty-text">
+      You dont have any selected book yet, Please select from list of book that available
+    </div>
+  </div>
+</ng-template>
+
+<!-- <button mat-raised-button (click)="onReset()" color="warn" [disabled]="selectedBook == null">Reset</button> -->

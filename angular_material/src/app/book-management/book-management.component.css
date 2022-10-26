@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+mat-toolbar button {
+  margin-right: 20px;
+}
+
+mat-drawer-container {
+  width: 100%;
+  flex-grow: 1;
+}
+
+mat-drawer {
+  width: 300px;
+}
+
+mat-drawer-content {
+  height: 100%;
+  overflow: hidden;
+}
+
+mat-list-item {
+  width: 100%;
+  cursor: pointer;
+}
+
+mat-list-item.active {
+  background-color: red;
+}

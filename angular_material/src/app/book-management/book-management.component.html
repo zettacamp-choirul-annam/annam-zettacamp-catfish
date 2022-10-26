@@ -1,0 +1,20 @@
+<div class="container">
+  <mat-toolbar>
+    <button mat-icon-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>Book Lending</span>
+  </mat-toolbar>
+
+  <mat-drawer-container class="container">
+    <mat-drawer #drawer mode="side" opened="true">
+      <mat-list role="list">
+        <mat-list-item role="listitem" routerLink="list" routerLinkActive="active">List</mat-list-item>
+        <mat-list-item role="listitem" routerLink="detail" routerLinkActive="active">Detail</mat-list-item>
+      </mat-list>
+    </mat-drawer>
+    <mat-drawer-content>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>
+</div>
