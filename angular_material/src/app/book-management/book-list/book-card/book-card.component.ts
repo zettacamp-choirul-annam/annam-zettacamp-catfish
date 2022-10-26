@@ -26,7 +26,15 @@ export class BookCardComponent implements OnInit {
       });
   }
 
-  onClick(book: any) {
+  onClick(book: BookType) {
+    if (this.isSelected) {
+      return this.bookService.resetSelectedBook();
+    }
+
     this.bookService.updateSelectedBook(book);
+  }
+
+  ngOnDestroy() {
+    this.subscription && this.subscription.unsubscribe();
   }
 }
