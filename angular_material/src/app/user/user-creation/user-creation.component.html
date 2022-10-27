@@ -62,9 +62,18 @@
             </mat-form-field>
 
             <div class="form-action">
-                  <button mat-raised-button type="button" (click)="goBack()">Back</button>
-                  <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
-                  <button mat-raised-button color="primary" type="submit">Sumbit</button>
+                  <button mat-raised-button type="button" (click)="goBack()">{{ 'creation.back' | translate }}</button>
+                  <button mat-raised-button color="warn" type="button" (click)="onReset()">{{ 'creation.reset' |
+                        translate }}</button>
+                  <button mat-raised-button color="primary" type="submit">{{'creation.submit' | translate}}</button>
             </div>
       </div>
 </form>
+
+<mat-form-field class="select-language">
+      <mat-label>Language</mat-label>
+      <mat-select #language (valueChange)="setLanguage(language.value)">
+            <mat-option value="en">en</mat-option>
+            <mat-option value="id">id</mat-option>
+      </mat-select>
+</mat-form-field>

@@ -5,6 +5,7 @@ import { Location } from '@angular/common';
 import { User } from '../models/user';
 import { UserService } from '../user.service';
 import { Subscription, first } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
       selector: 'app-user-creation',
@@ -39,8 +40,12 @@ export class UserCreationComponent implements OnInit {
       constructor(
             private route: ActivatedRoute,
             private location: Location,
-            private userService: UserService
-      ) { }
+            private userService: UserService,
+            public translate: TranslateService
+      ) {
+            this.translate.addLangs(['en', 'id']);
+            this.translate.setDefaultLang('en');
+      }
 
       ngOnInit(): void {
             const id = this.route.snapshot.queryParamMap.get('userId');
@@ -80,5 +85,9 @@ export class UserCreationComponent implements OnInit {
 
       ngOnDestroy() {
             this.subcription && this.subcription.unsubscribe();
+      }
+
+      setLanguage(lang: string) {
+            this.translate.use(lang);
       }
 }
