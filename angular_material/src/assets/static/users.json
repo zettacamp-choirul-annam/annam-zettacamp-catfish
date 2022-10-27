@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "id_number": "1",
+      "name": "Choirul Annam",
+      "age": "16",
+      "gender": "Male",
+      "email": "choirul.annam@zettacamp.pro",
+      "position": "Participant",
+      "marital_status": "Single",
+      "addresses": {
+        "address": "Yogyakarta",
+        "zip_code": "1235",
+        "city": "Yogyakarta",
+        "country": "Wakanda"
+      }
+    }
+  ]
+}

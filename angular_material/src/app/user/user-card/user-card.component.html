@@ -1,0 +1,9 @@
+<mat-card>
+      <mat-card-title>{{ user.name }}</mat-card-title>
+      <p>Age: {{ user.age}}</p>
+      <p>Gender: {{ user.gender }}</p>
+      <p>Position: {{ user.position }}</p>
+      <mat-card-actions align="end">
+            <button mat-button (click)="onEdit()">Edit</button>
+      </mat-card-actions>
+</mat-card>

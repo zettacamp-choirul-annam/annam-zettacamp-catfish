@@ -1,0 +1,70 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <h2 class="form-title">{{ isEdit ? 'Edit' : 'Add' }} user</h2>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>ID Number</mat-label>
+            <input matInput formControlName="id_number">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Name</mat-label>
+            <input matInput formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Age</mat-label>
+            <input matInput type="number" formControlName="age">
+      </mat-form-field>
+
+      <label class="form-label">Gender</label>
+      <mat-radio-group formControlName="gender">
+            <mat-radio-button value="{{ gender }}" *ngFor="let gender of genders">{{ gender }}</mat-radio-button>
+      </mat-radio-group>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Position</mat-label>
+            <mat-select formControlName="position">
+                  <mat-option value="{{ position }}" *ngFor="let position of positions">{{ position }}</mat-option>
+            </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" floatLabel="always">
+            <mat-label>Marital Status</mat-label>
+            <mat-select formControlName="marital_status">
+                  <mat-option value="{{ marital }}" *ngFor="let marital of maritals">{{ marital }}</mat-option>
+            </mat-select>
+      </mat-form-field>
+
+      <div class="form-group" formGroupName="addresses">
+            <mat-form-field appearance="fill" floatLabel="always">
+                  <mat-label>Address</mat-label>
+                  <input matInput formControlName="address">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" floatLabel="always">
+                  <mat-label>Zip code</mat-label>
+                  <input matInput type="number" formControlName="zip_code">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" floatLabel="always">
+                  <mat-label>City</mat-label>
+                  <input matInput formControlName="city">
+            </mat-form-field>
+
+            <mat-form-field appearance="fill" floatLabel="always">
+                  <mat-label>Country</mat-label>
+                  <input matInput formControlName="country">
+            </mat-form-field>
+
+            <div class="form-action">
+                  <button mat-raised-button type="button" (click)="goBack()">Back</button>
+                  <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button>
+                  <button mat-raised-button color="primary" type="submit">Sumbit</button>
+            </div>
+      </div>
+</form>
