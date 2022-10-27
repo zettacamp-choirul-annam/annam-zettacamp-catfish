@@ -1,0 +1,20 @@
+{
+  "form": {
+    "id_number": "ID Number",
+    "name": "Name",
+    "age": "Age",
+    "gender": "Gender",
+    "email": "Email",
+    "position": "Position",
+    "marital_status": "Marital Status",
+    "address": "Address",
+    "zip_code": "Zip Code",
+    "city": "City",
+    "country": "Country"
+  },
+  "actions": {
+    "back": "Back",
+    "reset": "Reset",
+    "submit": "Submit"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "jdenticon": "^3.2.0",
+    "ngx-jdenticon": "^1.0.4"
+  }
+}

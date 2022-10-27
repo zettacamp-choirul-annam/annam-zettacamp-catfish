@@ -1,0 +1,20 @@
+{
+  "form": {
+    "id_number": "Nomor ID",
+    "name": "Nama",
+    "age": "Umur",
+    "gender": "Kelamin",
+    "email": "Surel",
+    "position": "Posisi",
+    "marital_status": "Status Perkawinan",
+    "address": "Alamat",
+    "zip_code": "Kode Zip",
+    "city": "Kota",
+    "country": "Negara"
+  },
+  "actions": {
+    "back": "Kembali",
+    "reset": "Ulangi",
+    "submit": "Sumbit"
+  }
+}

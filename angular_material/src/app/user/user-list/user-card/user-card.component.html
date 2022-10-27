@@ -1,0 +1,22 @@
+<mat-card class="example-card">
+      <div class="mat-card-header">
+            <div mat-card-avatar class="avatar"></div>
+            <div class="mat-card-title-group">
+                  <mat-card-title>{{ user.name }}</mat-card-title>
+                  <mat-card-subtitle>{{ user.position }}</mat-card-subtitle>
+            </div>
+            <mat-card-actions align="end">
+                  <button mat-icon-button routerLink="/form" [queryParams]="{ id: user.id }">
+                        <mat-icon>edit</mat-icon>
+                  </button>
+            </mat-card-actions>
+      </div>
+      <mat-card-content>
+            <div class="mat-icon-list">
+                  <mat-icon>map</mat-icon> <span>{{ user.addresses.address }}, {{ user.addresses.country }}</span>
+            </div>
+            <div class="mat-icon-list">
+                  <mat-icon>mail</mat-icon> <span>{{ user.email }}</span>
+            </div>
+      </mat-card-content>
+</mat-card>

@@ -1,0 +1,10 @@
+<mat-toolbar>
+      <h2>User List</h2>
+      <button mat-button routerLink="/form">
+            <mat-icon>add</mat-icon> Add user
+      </button>
+</mat-toolbar>
+
+<div class="list">
+      <app-user-card [user]="user" *ngFor="let user of users"></app-user-card>
+</div>

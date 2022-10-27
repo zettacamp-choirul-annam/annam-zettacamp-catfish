@@ -1,0 +1,36 @@
+:host {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+}
+
+mat-toolbar {
+      padding: 40px;
+      background-color: transparent;
+      justify-content: space-between;
+}
+
+mat-toolbar>h2 {
+      font-size: 1.5rem;
+      margin: 0;
+}
+
+mat-toolbar>button {
+      line-height: 0;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background-color: rgb(0, 119, 255);
+      border-radius: 10px;
+}
+
+.list {
+      width: 100%;
+      flex: 1;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow: auto;
+}
