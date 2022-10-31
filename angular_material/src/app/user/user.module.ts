@@ -7,8 +7,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
-// import { NgxJdenticonModule } from "ngx-jdenticon";
-
 // angular material modules
 
 import { MatIconModule } from '@angular/material/icon';
@@ -54,8 +52,6 @@ export function HttpLoaderFactory(http: HttpClient) {
             MatRadioModule,
             MatSelectModule,
             MatToolbarModule,
-
-            // NgxJdenticonModule
 
             TranslateModule.forRoot({
                   defaultLanguage: 'en',
