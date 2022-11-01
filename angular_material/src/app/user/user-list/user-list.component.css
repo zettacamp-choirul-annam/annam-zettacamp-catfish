@@ -28,9 +28,8 @@ mat-toolbar>button {
 
 .list {
       width: 100%;
-      flex: 1;
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
-      overflow: auto;
+      align-items: flex-start;
 }

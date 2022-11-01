@@ -2,21 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserRoutingModule } from './user-routing.module';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-
-// angular material modules
-
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatToolbarModule } from '@angular/material/toolbar';
 
 // components
 
@@ -41,17 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
             UserRoutingModule,
             HttpClientModule,
             ReactiveFormsModule,
-
-            // angular material modules
-
-            MatIconModule,
-            MatButtonModule,
-            MatCardModule,
-            MatFormFieldModule,
-            MatInputModule,
-            MatRadioModule,
-            MatSelectModule,
-            MatToolbarModule,
+            FormsModule,
+            SharedModule,
 
             TranslateModule.forRoot({
                   defaultLanguage: 'en',

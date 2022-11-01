@@ -16,3 +16,8 @@ body {
       color: hsl(200, 20%, 25%);
       background-color: #f5f9fd;
 }
+
+mark {
+      padding: 0.1em;
+      background-color: rgb(109, 124, 235);
+}

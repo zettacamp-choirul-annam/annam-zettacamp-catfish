@@ -1,10 +1,17 @@
 <mat-toolbar>
       <h2>User List</h2>
+      <mat-form-field floatLabel="never">
+            <mat-icon matPrefix>search</mat-icon>
+            <input matInput type="text" placeholder="filter user..." [(ngModel)]="filterValue">
+            <button mat-icon-button matSuffix *ngIf="filterValue" (click)="filterValue = ''">
+                  <mat-icon>close</mat-icon>
+            </button>
+      </mat-form-field>
       <button mat-button routerLink="/form">
             <mat-icon>add</mat-icon> Add user
       </button>
 </mat-toolbar>
 
 <div class="list">
-      <app-user-card [user]="user" *ngFor="let user of users"></app-user-card>
+      <app-user-card [user]="user" [highlightTerm]="filterValue" *ngFor="let user of users | filter:filterValue"></app-user-card>
 </div>

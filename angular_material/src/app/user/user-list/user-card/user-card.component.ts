@@ -8,9 +8,9 @@ import { User } from '../../models/user.model';
 })
 export class UserCardComponent implements OnInit {
       @Input() user!: User;
+      @Input() highlightTerm: string = '';
 
       constructor() { }
 
-      ngOnInit(): void {
-      }
+      ngOnInit(): void { }
 }

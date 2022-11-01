@@ -51,10 +51,7 @@ export class UserFormComponent implements OnInit {
             private userService: UserService,
             private fb: FormBuilder,
             public translate: TranslateService,
-      ) {
-            this.translate.addLangs(['en', 'id']);
-            this.translate.setDefaultLang('en');
-      }
+      ) { }
 
       ngOnInit(): void {
             // get id from url params

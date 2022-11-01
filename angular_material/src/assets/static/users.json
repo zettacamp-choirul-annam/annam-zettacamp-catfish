@@ -29,6 +29,36 @@
         "city": "Yogyakarta",
         "country": "Konoha"
       }
+    },
+    {
+      "id": "3",
+      "name": "Crème Brulée",
+      "age": "19",
+      "gender": "Male",
+      "email": "crème.brulée@zettacamp.pro",
+      "position": "Participant",
+      "marital_status": "Single",
+      "addresses": {
+        "address": "Yogyakarta",
+        "zip_code": "1235",
+        "city": "Yogyakarta",
+        "country": "Konoha"
+      }
+    },
+    {
+      "id": "4",
+      "name": "Arya Purnama",
+      "age": "34",
+      "gender": "Male",
+      "email": "arya.purnama@zettacamp.pro",
+      "position": "Participant",
+      "marital_status": "Single",
+      "addresses": {
+        "address": "Yogyakarta",
+        "zip_code": "1235",
+        "city": "Yogyakarta",
+        "country": "Konoha"
+      }
     }
   ]
 }

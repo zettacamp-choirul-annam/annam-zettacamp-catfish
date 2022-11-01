@@ -12,6 +12,7 @@ import { User } from '../models/user.model';
 export class UserListComponent implements OnInit {
       subcription!: Subscription;
       users: User[] = [];
+      filterValue: string = '';
 
       constructor(private userService: UserService) { }
 
