@@ -1,0 +1,9 @@
+<mat-toolbar>
+      <span>Post</span>
+      <span style="margin: auto;"></span>
+      <a mat-raised-button color="primary" routerLink="/form">Add Post</a>
+</mat-toolbar>
+
+<div class="list">
+      <app-post-card [post]="post" *ngFor="let post of posts"></app-post-card>
+</div>

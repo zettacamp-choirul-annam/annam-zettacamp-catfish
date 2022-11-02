@@ -1,0 +1,9 @@
+<mat-card>
+      <mat-card-title>{{ post.title }}</mat-card-title>
+      <mat-card-content>
+            <p>{{ post.body }}</p>
+      </mat-card-content>
+      <mat-card-actions align="end">
+            <a mat-button routerLink="/form" [queryParams]="{ id: post.id }">Edit</a>
+      </mat-card-actions>
+</mat-card>
