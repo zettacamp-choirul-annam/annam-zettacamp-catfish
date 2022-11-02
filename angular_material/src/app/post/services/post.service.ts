@@ -50,15 +50,17 @@ export class PostService {
       }
 
       async addPost(data: Post): Promise<Post>  {
-            try {
-                  // const id = this.getAllPost().length + 1;
-                  // data.id = id;
-                  
+            try { 
                   const obsr = this.postData(data);
                   const resp = await firstValueFrom(obsr);
 
-                  // increment id
-                  const id = this.getAllPost().length + 1;
+                  // find biggest id
+                  const posts   = this.getAllPost();
+                  const postIds = posts.map(post => post.id);
+                  const maxId   = Math.max(...postIds);
+
+                  // increment id manually :(
+                  const id = maxId + 1;
                   resp.id = id;
 
                   const temp = this.getAllPost();
