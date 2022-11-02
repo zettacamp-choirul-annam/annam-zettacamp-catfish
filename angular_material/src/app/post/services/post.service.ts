@@ -35,6 +35,11 @@ export class PostService {
             return this.http.patch<Post>(url, data);
       }
 
+      private deleteData(id: number): Observable<Post> {
+            const url = this.API_URL + 'posts/' + id;
+            return this.http.delete<Post>(url);
+      }
+
       getAllPost(): Post[] {
             return this.posts.getValue();
       }
@@ -82,6 +87,33 @@ export class PostService {
                         return post;
                   });
 
+                  // update current value 
+                  this.posts.next(temp);
+
+                  return Promise.resolve(resp);
+            }
+
+            catch (error) {
+                  return Promise.reject(error);
+            }
+      }
+
+      async deletePost(id: number): Promise<Post>  {
+            try {
+                  const obsr = this.deleteData(id);
+                  const resp = await firstValueFrom(obsr);
+
+                  const temp = this.getAllPost();
+                  let index: number = -1;
+                  
+                  // find item index
+                  temp.forEach((post, i) => {
+                        if (post.id == id) index = i;
+                  });
+
+                  // remove item from array
+                  temp.splice(index, 1);
+                  
                   // update current value 
                   this.posts.next(temp);
 

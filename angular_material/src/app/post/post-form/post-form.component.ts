@@ -14,6 +14,7 @@ import Swal from 'sweetalert2'
 export class PostFormComponent implements OnInit {
       isEdit: boolean = false;
       id!: number;
+      isProgress: boolean = false;
 
       form = this.formBuilder.group({
             userId: [],
@@ -46,6 +47,7 @@ export class PostFormComponent implements OnInit {
 
       onSubmit() {
             let data: any = this.form.value;
+            this.isProgress = true;
 
             if (!this.isEdit) {
                   this.postService.addPost(data)
@@ -65,7 +67,10 @@ export class PostFormComponent implements OnInit {
                                     icon: 'error',
                                     confirmButtonText: 'Close'
                               })
-                        });
+                        })
+                        .finally(() => {
+                              this.isProgress = false;
+                        })
             }
 
             else {
@@ -86,7 +91,10 @@ export class PostFormComponent implements OnInit {
                                     icon: 'error',
                                     confirmButtonText: 'Close'
                               })
-                        });
+                        })
+                        .finally(() => {
+                              this.isProgress = false;
+                        })
             }
       }
 }

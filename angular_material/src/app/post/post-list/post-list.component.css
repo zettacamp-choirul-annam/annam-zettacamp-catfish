@@ -1,16 +1,17 @@
 :host {
       width: 100%;
-      height: auto;
+      height: 100vh;
       display: flex;
       flex-direction: column;
 }
 
 .list {
       width: 100%;
-      height: auto;
+      flex: 1;
       padding: 40px;
       display: flex;
       flex-direction: column;
+      overflow: auto;
 }
 
 app-post-card {

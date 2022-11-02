@@ -4,6 +4,8 @@
       <button mat-raised-button color="primary" (click)="location.back()">Back</button>
 </mat-toolbar>
 
+<mat-progress-bar mode="indeterminate" *ngIf="isProgress"></mat-progress-bar>
+
 <form class="form" [formGroup]="form">
       <h1>{{ isEdit ? 'Update' : 'Add' }} Post</h1>
       <mat-form-field appearance="legacy">
@@ -18,5 +20,9 @@
             <mat-label>Body</mat-label>
             <input matInput formControlName="body">
       </mat-form-field>
-      <button mat-raised-button type="submit" color="primary" (click)="onSubmit()">{{ isEdit ? 'update' : 'add' }} post</button>
+      <button mat-raised-button 
+            type="submit" color="primary" 
+            (click)="onSubmit()"
+            [disabled]="isProgress"
+      >{{ isEdit ? 'update' : 'add' }} post</button>
 </form>
