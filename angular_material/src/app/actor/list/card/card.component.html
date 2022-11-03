@@ -1,0 +1,12 @@
+<!-- <mat-card>
+      <img mat-card-image [src]="actor.image" alt="">
+      <mat-card-title>{{ actor.name }}</mat-card-title>
+      <mat-card-actions>
+            <button mat-button>See Detail</button>
+      </mat-card-actions>
+</mat-card> -->
+
+<div class="card" matRipple routerLink="/actor/detail/{{ actor.id }}">
+      <img [src]="actor.image" alt="" class="card-image" draggable="false">
+      <h2 class="card-title">{{ actor.name }}</h2>
+</div>

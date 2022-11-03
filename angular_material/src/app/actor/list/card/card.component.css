@@ -1,0 +1,31 @@
+:host {
+      width: calc(25% - 40px);
+      margin: 20px;
+}
+
+.card {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(119, 140, 202, 0.15) !important;
+      cursor: pointer;
+      user-select: none;
+      overflow: hidden;
+      transition: 0.2s;
+}
+
+.card:hover {
+      transform: scale(0.9);
+}
+
+.card-image {
+      width: 100% !important;
+      height: 250px;
+      object-fit: cover;
+}
+
+.card-title {
+      margin: 20px;
+      font-weight: 500;
+      font-size: 1.4rem;
+}

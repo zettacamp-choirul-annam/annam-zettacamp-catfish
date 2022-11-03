@@ -1,0 +1,19 @@
+<mat-tab-group animationDuration="0ms">
+      <mat-tab label="Details">
+            <div class="actor">
+                  <img class="actor-image" [src]="actor?.image" alt="">
+                  <div class="actor-details">
+                        <h2 class="actor-name">{{ actor?.name }}</h2>
+                        <p class="actor-bio">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, maiores,
+                              reiciendis nulla porro architecto repellat eius debitis id in quam cupiditate sit ipsa
+                              impedit! Esse rem delectus quia? Maxime, dolorum!</p>
+                  </div>
+            </div>
+      </mat-tab>
+      <mat-tab label="Movies">
+            <mat-card *ngFor="let movie of movies">
+                  <img mat-card-image [src]="movie.image">
+                  <mat-card-title>{{ movie.title }}</mat-card-title>
+            </mat-card>
+      </mat-tab>
+</mat-tab-group>

@@ -1,0 +1,17 @@
+.actor {
+      width: 100%;
+      padding: 60px;
+      display: flex;
+}
+
+.actor-image {
+      width: 220px;
+      height: 300px;
+      margin-right: 30px;
+      border-radius: 20px;
+}
+
+mat-card {
+      width: 300px !important;
+      margin: 20px;
+}
