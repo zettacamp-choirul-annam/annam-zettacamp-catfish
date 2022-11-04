@@ -47,23 +47,24 @@ export class AppComponent implements OnInit {
       // custom filterPredicate function
       filterMatcher(data: User, filter: string) {
             // fiter data
-            const { fname, ftype, femail, fstatus } = JSON.parse(filter);
-
+            const { name, type, email, status } = JSON.parse(filter);
+            
             // used to check if string is empty or not
             function isEmpty(text: string) {
                   return !text || !text.trim();
             }
             
-            const isNameMatch  = isEmpty(fname)   || this.combineName(data).includes(fname);
-            const isTypeMatch  = isEmpty(ftype)   || data.company.user_type == ftype;
-            const isEmailMatch = isEmpty(femail)  || data.email.includes(femail);
-            const isStatMatch  = isEmpty(fstatus) || data.user_status == fstatus;
+            const isNameMatch  = isEmpty(name)   || this.combineName(data).includes(name);
+            const isTypeMatch  = isEmpty(type)   || data.company.user_type == type;
+            const isEmailMatch = isEmpty(email)  || data.email.includes(email);
+            const isStatMatch  = isEmpty(status) || data.user_status == status;
 
             return isNameMatch && isTypeMatch && isEmailMatch && isStatMatch;
       }
 
       // run filterPredicate function
       applyFilter(filterData: any) {
+            
             const filter = JSON.stringify(filterData);
             this.dataSource.filter = filter;
       }
