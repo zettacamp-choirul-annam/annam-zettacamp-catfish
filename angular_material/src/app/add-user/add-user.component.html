@@ -1,5 +1,9 @@
 <h1 mat-dialog-title>{{ 'add_user' | translate }}</h1>
 <div class="form" mat-dialog-content [formGroup]="userForm">
+      <mat-form-field appearance="fill" style="display: none;">
+            <mat-label></mat-label>
+            <input matInput type="number" formControlName="id">
+      </mat-form-field>
       <div class="form-field">
             <div class="form-field-label">{{ 'user_field.civility.title' | translate }}</div>
             <mat-radio-group formControlName="civility" value="Mr">
@@ -31,5 +35,5 @@
 </div>
 <div mat-dialog-actions align="end">
       <button mat-button (click)="onClose()">{{ 'cancel' | translate }}</button>
-      <button mat-raised-button color="primary" (click)="onAdd()" cdkFocusInitial>{{ 'add' | translate }}</button>
+      <button mat-raised-button color="primary" (click)="onSubmit()" cdkFocusInitial>{{ 'add' | translate }}</button>
 </div>

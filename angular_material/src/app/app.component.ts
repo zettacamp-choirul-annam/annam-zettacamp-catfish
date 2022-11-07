@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 })
 export class AppComponent implements OnInit {
       dataSource = new MatTableDataSource<User>();
-      displayedColumns: string[] = ['civility', 'first_name', 'last_name', 'date_of_birth', 'gender']
+      displayedColumns: string[] = ['civility', 'first_name', 'last_name', 'date_of_birth', 'gender', 'edit']
 
       constructor(
             private userService: UserService,
@@ -28,20 +28,24 @@ export class AppComponent implements OnInit {
             });
       }
 
-      openDialog() {
-            const dialogRef = this.dialog.open(AddUserComponent);
+      openDialog(isEdit: boolean, user?: User) {
+            const dialogRef = this.dialog.open(AddUserComponent, {
+                  data: { isEdit, user }
+            });
 
-            dialogRef.afterClosed().subscribe(result => {   
-                  console.log(result);
-                                 
+            dialogRef.afterClosed().subscribe(result => {
                   if (!result) return;
 
-                  this.userService.addUser(result);
+                  if (isEdit) {
+                        this.userService.editUser(result);
+                  } else {
+                        this.userService.addUser(result);
+                  }
 
                   Swal.fire({
                         icon: 'success',
                         title: 'Success'
-                  })
+                  });
             });
       }
 
