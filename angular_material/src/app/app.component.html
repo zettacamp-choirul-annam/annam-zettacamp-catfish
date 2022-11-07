@@ -11,8 +11,8 @@
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <ng-container matColumnDef="civility">
-            <th mat-header-cell *matHeaderCellDef>{{ 'user_field.civility' | translate }}</th>
-            <td mat-cell *matCellDef="let user">{{ (user.civility == 'Mr' ? 'user_field.civility_mr' : 'user_field.civility_mrs') | translate }}</td>
+            <th mat-header-cell *matHeaderCellDef>{{ 'user_field.civility.title' | translate }}</th>
+            <td mat-cell *matCellDef="let user">{{ ('user_field.civility.options.' + user.civility.toLowerCase()) | translate }}</td>
       </ng-container>
 
       <ng-container matColumnDef="first_name">
@@ -25,9 +25,14 @@
             <td mat-cell *matCellDef="let user">{{ user.last_name }}</td>
       </ng-container>
 
+      <ng-container matColumnDef="date_of_birth">
+            <th mat-header-cell *matHeaderCellDef>{{ 'user_field.date_of_birth' | translate }}</th>
+            <td mat-cell *matCellDef="let user">{{ user.date_of_birth | date }}</td>
+      </ng-container>
+
       <ng-container matColumnDef="gender">
-            <th mat-header-cell *matHeaderCellDef>{{ 'user_field.gender' | translate }}</th>
-            <td mat-cell *matCellDef="let user">{{ (user.gender == 'male' ? 'user_field.gender_male' : 'user_field.gender_female') | translate }}</td>
+            <th mat-header-cell *matHeaderCellDef>{{ 'user_field.gender.title' | translate }}</th>
+            <td mat-cell *matCellDef="let user">{{ ('user_field.gender.options.' + user.gender.toLowerCase()) | translate }}</td>
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

@@ -4,13 +4,22 @@
       "cancel": "Annuler",
       "add": "Ajouter",
       "user_field": {
-            "civility": "Civilité",
-            "civility_mr": "Monsieur",
-            "civility_mrs": "Madame",
+            "civility": {
+                  "title": "Civilité",
+                  "options": {
+                        "mr": "Monsieur",
+                        "mrs": "Madame"
+                  }
+            },
             "first_name": "Prénom",
             "last_name": "Nom de famille",
-            "gender": "Le genre",
-            "gender_male": "Mâle",
-            "gender_female": "Femelle"
+            "date_of_birth": "Date de naissance",
+            "gender": {
+                  "title": "Le genre",
+                  "options": {
+                        "male": "Mâle",
+                        "female": "Femelle"
+                  }
+            }
       }
 }

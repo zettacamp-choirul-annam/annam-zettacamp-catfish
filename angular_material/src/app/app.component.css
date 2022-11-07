@@ -1,6 +1,7 @@
 mat-toolbar {
       padding: 0;
       justify-content: space-between;
+      background-color: transparent;
 }
 
 table {

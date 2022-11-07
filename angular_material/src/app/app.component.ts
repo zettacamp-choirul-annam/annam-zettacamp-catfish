@@ -14,7 +14,7 @@ import Swal from 'sweetalert2';
 })
 export class AppComponent implements OnInit {
       dataSource = new MatTableDataSource<User>();
-      displayedColumns: string[] = ['civility', 'first_name', 'last_name', 'gender']
+      displayedColumns: string[] = ['civility', 'first_name', 'last_name', 'date_of_birth', 'gender']
 
       constructor(
             private userService: UserService,
@@ -31,7 +31,9 @@ export class AppComponent implements OnInit {
       openDialog() {
             const dialogRef = this.dialog.open(AddUserComponent);
 
-            dialogRef.afterClosed().subscribe(result => {                  
+            dialogRef.afterClosed().subscribe(result => {   
+                  console.log(result);
+                                 
                   if (!result) return;
 
                   this.userService.addUser(result);
