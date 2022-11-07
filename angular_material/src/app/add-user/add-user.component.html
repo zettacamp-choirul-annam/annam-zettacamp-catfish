@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>{{ 'add_user' | translate }}</h1>
+<div class="form" mat-dialog-content [formGroup]="userForm">
+      <div class="form-field">
+            <div class="form-field-label">{{ 'user_field.civility' | translate }}</div>
+            <mat-radio-group formControlName="civility">
+                  <mat-radio-button value="Mr">{{ 'user_field.civility_mr' | translate }}</mat-radio-button>
+                  <mat-radio-button value="Mrs">{{ 'user_field.civility_mrs' | translate }}</mat-radio-button>
+            </mat-radio-group>
+      </div>
+      <mat-form-field appearance="fill">
+            <mat-label>{{ 'user_field.first_name' | translate }}</mat-label>
+            <input matInput formControlName="first_name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+            <mat-label>{{ 'user_field.last_name' | translate }}</mat-label>
+            <input matInput formControlName="last_name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+            <mat-label>{{ 'user_field.gender' | translate }}</mat-label>
+            <mat-select formControlName="gender">
+                  <mat-option value="male">{{ 'user_field.gender_male' | translate }}</mat-option>
+                  <mat-option value="female">{{ 'user_field.gender_female' | translate }}</mat-option>
+            </mat-select>
+      </mat-form-field>
+</div>
+<div mat-dialog-actions align="end">
+      <button mat-button (click)="onClose()">{{ 'cancel' | translate }}</button>
+      <button mat-raised-button color="primary" [mat-dialog-close]="userForm.value" cdkFocusInitial>{{ 'add' | translate }}</button>
+</div>

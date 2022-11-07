@@ -1,0 +1,18 @@
+.form {
+      width: 400px;
+      display: flex;
+      flex-direction: column;
+}
+
+.form-field {
+      margin-bottom: 1.25em;
+}
+
+.form-field-label {
+      font-size: 0.85em;
+      margin-bottom: 1.25em;
+}
+
+.form-field mat-radio-button {
+      margin-right: 1em;
+}

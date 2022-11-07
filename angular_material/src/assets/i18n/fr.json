@@ -1,0 +1,16 @@
+{
+      "add_user": "Ajouter Un Utilisateur",
+      "language": "Langue",
+      "cancel": "Annuler",
+      "add": "Ajouter",
+      "user_field": {
+            "civility": "Civilité",
+            "civility_mr": "Monsieur",
+            "civility_mrs": "Madame",
+            "first_name": "Prénom",
+            "last_name": "Nom de famille",
+            "gender": "Le genre",
+            "gender_male": "Mâle",
+            "gender_female": "Femelle"
+      }
+}

@@ -1,0 +1,17 @@
+mat-toolbar {
+      padding: 0;
+      justify-content: space-between;
+}
+
+table {
+      width: 100%;
+}
+
+button {
+      margin-bottom: 1.2em;
+}
+
+.select-language {
+      font-size: 0.7rem;
+      width: 7em;
+}
