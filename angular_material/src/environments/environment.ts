@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+      production: false,
+      apiUrl: 'https://api.zettacamp.zetta-staging.work/graphql',
+      token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZmZlYzVjMmNlNjM1YjJmYjZhODFmMmQiLCJlbWFpbCI6Im0ubXVnbmllcjJAeW9wbWFpbC5jb20iLCJpYXQiOjE2Njc4ODAzMTYsImV4cCI6MTY2Nzk2NjcxNn0.xq7RhTgrOhXrWePuh0KRJbno6qrMfnDjeVqKqTzFVb0',
 };
 
 /*
