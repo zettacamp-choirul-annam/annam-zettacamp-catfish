@@ -1,0 +1,63 @@
+<!-- <form>
+      <mat-form-field style="margin-right: 0.6rem;">
+            <mat-label>Search</mat-label>
+            <input matInput #search>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="button" (click)="onSearch(search.value)"
+            [disabled]="isLoading"
+            style="margin-right: 2rem;">Search</button>
+
+      <mat-form-field style="margin-right: 0.6rem;">
+            <mat-label>Search ontype</mat-label>
+            <input matInput #search2 autocomplete="off" (input)="searchOnType(search2.value)">
+      </mat-form-field>
+</form>
+
+<br> <br> -->
+
+<div class="result">
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+            <ng-container matColumnDef="civility">
+                  <th mat-header-cell *matHeaderCellDef>
+                        <span>Civility</span>
+                        <br>
+                        <mat-form-field style="margin-right: 0.6rem;" floatLabel="never">
+                              <mat-label>disabled</mat-label>
+                              <input matInput #search2 autocomplete="off" (input)="searchOnType(search2.value)"
+                                    disabled="true">
+                        </mat-form-field>
+                  </th>
+                  <td mat-cell *matCellDef="let user">{{user.civility}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="first_name">
+                  <th mat-header-cell *matHeaderCellDef>
+                        <span>First Name</span>
+                        <br>
+                        <mat-form-field style="margin-right: 0.6rem;" floatLabel="never">
+                              <mat-label>disabled</mat-label>
+                              <input matInput #search2 autocomplete="off" (input)="searchOnType(search2.value)"
+                                    disabled="true">
+                        </mat-form-field>
+                  </th>
+                  <td mat-cell *matCellDef="let user">{{user.first_name}} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="last_name">
+                  <th mat-header-cell *matHeaderCellDef>
+                        <span>Last Name</span>
+                        <br>
+                        <mat-form-field style="margin-right: 0.6rem;" floatLabel="never">
+                              <mat-label>Search by last name</mat-label>
+                              <input matInput #search2 autocomplete="off" (input)="searchOnType(search2.value)">
+                        </mat-form-field>
+                  </th>
+                  <td mat-cell *matCellDef="let user">{{user.last_name}}</td>
+            </ng-container>
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

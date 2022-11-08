@@ -1,0 +1,26 @@
+form {
+      width: 100%;
+      padding: 20px;
+}
+
+.result {
+      position: relative;
+      width: 100%;
+      min-height: 400px;
+      display: flex;
+      justify-content: center;
+}
+
+table {
+      width: 100%;
+}
+
+mat-spinner {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+}
+
+.mat-header-cell {
+      padding-top: 1em;
+}
