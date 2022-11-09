@@ -1,8 +1,14 @@
-<mat-toolbar color="primary">
-      <span style="margin-right: 1rem;">Hello World</span>
-      <a mat-button routerLink="/">Promo</a>
-      <a mat-button routerLink="school">School</a>
-      <a mat-button routerLink="search">Search</a>
-</mat-toolbar>
+<div class="container">
+      <mat-toolbar class="toolbar">
+            <h1 class="toolbar-title">My School</h1>
+            <nav class="nav">
+                  <a mat-button class="nav-item" routerLink="/promo" routerLinkActive="active">Promo</a>
+                  <a mat-button class="nav-item" routerLink="/school" routerLinkActive="active">School</a>
+                  <a mat-button class="nav-item" routerLink="/search" routerLinkActive="active">Search</a>
+            </nav>
+      </mat-toolbar>
 
-<router-outlet></router-outlet>
+      <div class="content">
+            <router-outlet></router-outlet>
+      </div>
+</div>

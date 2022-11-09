@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Add Promo</h1>
+<div mat-dialog-content>
+      <div class="form" [formGroup]="promoForm">
+            <mat-form-field appearance="fill">
+                  <mat-label>Ref</mat-label>
+                  <input matInput formControlName="ref">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                  <mat-label>Title</mat-label>
+                  <input matInput formControlName="title">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                  <mat-label>Subtitle</mat-label>
+                  <input matInput formControlName="sub_title">
+            </mat-form-field>
+            <mat-form-field appearance="fill">
+                  <mat-label>Description</mat-label>
+                  <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+      </div>
+</div>
+<div mat-dialog-actions align="end">
+      <button mat-button mat-dialog-close>cancel</button>
+      <button mat-raised-button color="primary" (click)="dialogClose()" [disabled]="promoForm.invalid">add</button>
+</div>

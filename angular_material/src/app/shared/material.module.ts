@@ -8,6 +8,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
       exports: [
@@ -18,7 +20,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
             MatToolbarModule,
             MatIconModule,
             MatTableModule,
-            MatProgressSpinnerModule
+            MatProgressSpinnerModule,
+            MatDialogModule,
+            MatPaginatorModule
       ]
 })
 export class MaterialModule { }

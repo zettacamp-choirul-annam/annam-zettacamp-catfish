@@ -9,6 +9,6 @@ export class PromoComponent implements OnInit {
       constructor() { }
 
       ngOnInit(): void {
-            
+
       }
 }

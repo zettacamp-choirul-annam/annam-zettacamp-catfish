@@ -1,3 +1,16 @@
-.list {
+.promo-list {
+      width: 100%;
       padding: 20px;
+}
+
+.promo-card-container {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.promo-card {
+      width: calc((100% / 3) - 40px);
+      margin: 20px;
 }

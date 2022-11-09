@@ -1,3 +1,17 @@
-<div class="list">
-      <app-card *ngFor="let promo of promos" [promo]="promo"></app-card>
+<div class="promo-list">
+      <div class="promo-card-container">
+            <app-card class="promo-card" *ngFor="let promo of promos" [promo]="promo"></app-card>
+      </div>
+      <mat-paginator #paginator class="promo-paginator" 
+            (page)="onPaginatorChange($event)" 
+            [pageSizeOptions]="pageSizeOptions"
+            showFirstLastButtons="true"
+      ></mat-paginator>
 </div>
+
+
+<!-- <mat-spinner *ngIf="isLoading" class="spinner"></mat-spinner>
+
+<button class="promo-fab" mat-fab (click)="openDialog()">
+      <mat-icon>edit</mat-icon>
+</button> -->
