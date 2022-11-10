@@ -1,0 +1,14 @@
+.container {
+      width: 80vw;
+      height: 80vh;
+      padding: 10px;
+      margin: 20px;
+}
+
+.border {
+      border: 1px solid red;
+}
+
+.m-vertical-1 {
+      margin: 10px 0;
+}
