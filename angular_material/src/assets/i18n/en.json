@@ -1,0 +1,11 @@
+{
+      "auth": {
+            "title": "Login",
+            "subtitle": "Please login to continue",
+            "field": {
+                  "email": "email",
+                  "password": "password"
+            },
+            "submit": "Login"
+      }
+}

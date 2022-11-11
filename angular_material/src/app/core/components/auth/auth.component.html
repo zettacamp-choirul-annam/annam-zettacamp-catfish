@@ -1,0 +1,17 @@
+<mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
+
+<div class="auth">
+      <form class="auth-form" [formGroup]="form">
+            <h2 class="auth-form-title">{{ 'auth.title' | translate }}</h2>
+            <h2 class="auth-form-subtitle">{{ 'auth.subtitle' | translate }}</h2>
+            <div class="auth-form-field">
+                  <label class="auth-form-label">{{ 'auth.field.email' | translate }}</label>
+                  <input type="text" class="auth-form-input" formControlName="email">
+            </div>
+            <div class="auth-form-field">
+                  <label class="auth-form-label">{{ 'auth.field.password' | translate }}</label>
+                  <input type="password" class="auth-form-input" formControlName="password">
+            </div>
+            <button type="button" class="auth-form-submit" (click)="onSubmit()" [disabled]="isLoading">{{ 'auth.submit' | translate }}</button>
+      </form>
+</div>

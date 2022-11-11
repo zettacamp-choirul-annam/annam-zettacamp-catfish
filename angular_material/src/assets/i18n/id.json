@@ -1,0 +1,11 @@
+{
+      "auth": {
+            "title": "Masuk",
+            "subtitle": "Tolong masuk untuk melanjutkan",
+            "field": {
+                  "email": "surel",
+                  "password": "kata sandi"
+            },
+            "submit": "Masuk"
+      }
+}
